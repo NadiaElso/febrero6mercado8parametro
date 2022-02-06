@@ -86,22 +86,25 @@ function cargadeproductos() {
     `Los productos disponibles son ${productonuevo3}$  ${precioproductonuevo3} hay en stock ${stocknuevoproducto3}`
   );
 }
-let cantidadAcomprar: number = Number(prompt("Cuantos desea comprar"));
-while (cantidadAcomprar <= 0) {
-  cantidadAcomprar = Number(
+let Acomprar: number = Number(prompt("Cuantos desea comprar"));
+while (Acomprar <= 0) {
+  Acomprar = Number(
     prompt(
       "Ingrese la cantidad de productos que va a comprar que sea mayor a 0"
     )
   );
 }
-function compradeusuario(cantidadAcomprar:number) {
+function compradeusuario(Acomprar: number) {
   cargadeproductos();
-  
-  for (let index = 0; index < cantidadAcomprar; index++) {
+
+  for (let index = 0; index < Acomprar; index++) {
     let compradeunproducto: string = String(
       prompt("Que producto desea comprar")
     );
-   
+
+    let cantidadAcomprar: number = Number(
+      prompt("Ingresa la cantidad a comprar")
+    );
 
     let compradeproducto: string = "";
     let cantidaddecompradeproducto: number = 0;
@@ -146,8 +149,4 @@ function compradeusuario(cantidadAcomprar:number) {
   }
 }
 
-
-
- 
-
-compradeusuario(cantidadAcomprar)
+compradeusuario(Acomprar);
